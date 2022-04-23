@@ -4,7 +4,7 @@ import { HambList } from './components/HamburguesasList';
 const KEY = "hambs";
 //const costoFijo = 255;
 
-export function Hamburguesas(){
+export function Hamburguesas(props){
 
     const [hambs, setHambs] = useState([
         {id: 1, nombre: "Hamburguesa Comun", cant: 0},
@@ -32,6 +32,7 @@ export function Hamburguesas(){
         const hamb = newHambs.find((hamb) =>hamb.id === id);
         hamb.cant++;
         setHambs(newHambs);
+        props.onHamburguesasChange(totalViandas(newHambs));
     }
     
     const restar = (id) =>{
@@ -39,6 +40,7 @@ export function Hamburguesas(){
         const hamb = newHambs.find((hamb) =>hamb.id === id);
         hamb.cant--;
         setHambs(newHambs);
+        props.onHamburguesasChange(totalViandas(newHambs));
     }
 
 

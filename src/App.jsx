@@ -13,12 +13,16 @@ export function App() {
         setState({ ...state, minutasQty: newQty });
     }
 
+    const hamburguesasChanged = (newQty) => {
+        setState({ ...state, hamburguesasQty: newQty });
+    }
+
     //useEffect(() => console.log(state), [state]);
 
     return (
         <Fragment>
-            <Minutas onMinutasChange={minutasChanged} />
-            <Hamburguesas />
+            <Minutas onMinutasChange={minutasChanged} /> 
+            <Hamburguesas onHamburguesasChange={hamburguesasChanged}/>
         </Fragment>
     );
 }
