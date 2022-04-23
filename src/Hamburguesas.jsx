@@ -52,7 +52,7 @@ export function Hamburguesas(props){
         return total;
     }
 
-    const handleReset = () =>{
+    /*const handleReset = () =>{
         reset(hambs);
     }
 
@@ -64,13 +64,11 @@ export function Hamburguesas(props){
         }
         setHambs(hambs);
         
-    }
+    }*/
 
     return (
         <Fragment>
             <HambList hambs={hambs} sumar={sumar} restar={restar}/>
-            <button onClick={handleReset}>Reset</button>
-
         </Fragment>    
         
     );

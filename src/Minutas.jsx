@@ -63,7 +63,7 @@ export function Minutas(props){
         return total;
     }
 
-    const handleReset = () =>{
+    /*const handleReset = () =>{
         reset(minutas);
     }
 
@@ -75,12 +75,11 @@ export function Minutas(props){
         }
         setMinutas(minutas);
         
-    }
+    }*/
 
     return (
         <Fragment>
             <MinutasList minutas={minutas} sumar={sumar} restar={restar}/>
-            <button onClick={handleReset}>Reset</button>
         </Fragment>    
     );
 }
