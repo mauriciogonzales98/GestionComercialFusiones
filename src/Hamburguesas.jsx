@@ -69,9 +69,6 @@ export function Hamburguesas(props){
     return (
         <Fragment>
             <HambList hambs={hambs} sumar={sumar} restar={restar}/>
-            <div>
-                El total de viandas es: {totalViandas(hambs)}
-            </div>
             <button onClick={handleReset}>Reset</button>
 
         </Fragment>    
