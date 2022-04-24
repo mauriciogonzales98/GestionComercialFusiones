@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Hamburguesas } from './Hamburguesas';
 import { Minutas } from './Minutas';
 import { Woks } from './Woks';
+import { Torpedos } from './Torpedos';
 
 export function App() {
 
@@ -11,6 +12,7 @@ export function App() {
         minutasQty: 0,
         hamburguesasQty: 0,
         woksQty: 0,
+        torpedosQty: 0,
     });
 
     const minutasChanged = (newQty) => {
@@ -25,7 +27,11 @@ export function App() {
         setState({ ...state, woksQty: newQty });
     }
 
-    total = state.hamburguesasQty + state.minutasQty + state.woksQty;
+    const torpedosChanged = (newQty) => {
+        setState({ ...state, torpedosQty: newQty });
+    }
+
+    total = state.hamburguesasQty + state.minutasQty + state.woksQty + state.torpedosQty;
 
     /*const totalViandas = (state) =>{
         let total = 0, cantidad;
@@ -41,6 +47,7 @@ export function App() {
             <Minutas onMinutasChange={minutasChanged} /> <br></br>
             <Hamburguesas onHamburguesasChange={hamburguesasChanged}/> <br></br>
             <Woks onWoksChange={woksChanged} /> <br></br>
+            <Torpedos onTorpedosChange={torpedosChanged} /> <br></br>
 
             <div>
                 El total de viandas es {total}
