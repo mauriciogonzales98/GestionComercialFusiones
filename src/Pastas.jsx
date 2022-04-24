@@ -21,6 +21,8 @@ export function Pastas(props){
         {id: 13, nombre: "Ravioles Tuco/Crema/Mixta", cant: 0},
         {id: 14, nombre: "Ravioles Bolognesa", cant: 0},
         {id: 15, nombre: "Ravioles Albondigas", cant: 0},
+        {id: 16, nombre: "Canelones Tuco/Crema/Mixta", cant: 0},
+        {id: 17, nombre: "Canelones Bolognesa", cant: 0},
     ]);
 
     useEffect(() => {
