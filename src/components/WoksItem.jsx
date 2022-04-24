@@ -1,8 +1,8 @@
 import React from "react";
 
-export function HambItem ({ hambs, sumar, restar }){
-    const {id, nombre, cant} = hambs;
-    
+export function WoksItem ({ woks, sumar, restar }){
+    const {id, nombre, cant} = woks;
+
     const handleSumar = () =>{
         sumar(id);
     };
@@ -10,9 +10,9 @@ export function HambItem ({ hambs, sumar, restar }){
     const handleRestar = () =>{
         restar(id);
     };
-        //<input type="checkbox" checked={completed} onChange={handleTodoClick}/>
+
     return (<li> 
-        {hambs.nombre} | {hambs.cant} 
+        {woks.nombre} | {woks.cant} 
         <button onClick={handleSumar}>+</button>
         <button onClick={handleRestar}>-</button>
         </li>);

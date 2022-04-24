@@ -2,6 +2,7 @@ import React from "react";
 
 export function MinutasItem ({ minutas, sumar, restar }){
     const {id, nombre, cant} = minutas;
+    
     const handleSumar = () =>{
         sumar(id);
     };
