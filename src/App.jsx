@@ -6,6 +6,7 @@ import { Torpedos } from './Torpedos';
 import { Carlitos } from './Carlitos';
 import { Familiares } from './Familiares';
 import { Pizzanesas } from './Pizzanesas';
+import { Pastas } from './Pastas';
 
 export function App() {
 
@@ -19,6 +20,7 @@ export function App() {
         carlitosQty: 0,
         familiaresQty: 0,
         pizzanesasQty: 0,
+        pastasQty: 0,
     });
 
     const minutasChanged = (newQty) => {
@@ -49,6 +51,10 @@ export function App() {
         setState({ ...state, pizzanesasQty: newQty });
     }
 
+    const pastasChanged = (newQty) => {
+        setState({ ...state, pastasQty: newQty });
+    }
+
     total = state.hamburguesasQty + state.minutasQty + state.woksQty + state.torpedosQty + state.carlitosQty + state.familiaresQty + state.pizzanesasQty;
 
     /*const totalViandas = (state) =>{
@@ -69,6 +75,7 @@ export function App() {
             <Carlitos onCarlitosChange={carlitosChanged} /> <br></br>
             <Familiares onFamiliaresChange={familiaresChanged} /> <br></br>
             <Pizzanesas onPizzanesasChange={pizzanesasChanged} /> <br></br>
+            <Pastas onPastasChange={pastasChanged} /> <br></br>
             <div>
                 El total de viandas es {total}
             </div>
