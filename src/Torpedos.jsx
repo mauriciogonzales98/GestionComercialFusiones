@@ -1,9 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { TorpedosList } from './components/TorpedosList';
-//import {v4 as uuidv4} from 'uuid';
 
 const KEY = "torpedos";
-//const costoFijo = 255;
 
 export function Torpedos(props){
 

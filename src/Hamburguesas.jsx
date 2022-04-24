@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { HambList } from './components/HamburguesasList';
 
 const KEY = "hambs";
-//const costoFijo = 255;
 
 export function Hamburguesas(props){
 
@@ -13,15 +12,6 @@ export function Hamburguesas(props){
         {id: 4, nombre: "Hamburguesa Doble", cant: 0},
         {id: 5, nombre: "Hamburguesa Fusiones", cant: 0}
     ]);
-
-    //const hambRef = useRef();
-
-    /*useEffect(() => {
-        const storedHambs = JSON.parse(localStorage.getItem(KEY));
-        if(storedHambs){
-            setHambs(storedHambs);
-        }
-    }, [] );*/
 
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(hambs))
@@ -51,20 +41,6 @@ export function Hamburguesas(props){
         }
         return total;
     }
-
-    /*const handleReset = () =>{
-        reset(hambs);
-    }
-
-    const reset = (hambs) =>{
-        let cantidad;
-        
-        for(cantidad in hambs){
-            hambs[cantidad].cant = 0;
-        }
-        setHambs(hambs);
-        
-    }*/
 
     return (
         <Fragment>

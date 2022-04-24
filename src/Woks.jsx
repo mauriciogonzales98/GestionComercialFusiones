@@ -1,9 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { WoksList } from './components/WoksList';
-//import {v4 as uuidv4} from 'uuid';
 
 const KEY = "woks";
-//const costoFijo = 255;
 
 export function Woks(props){
 
@@ -24,15 +22,6 @@ export function Woks(props){
         {id: 14, nombre: "Pollo Saltado", cant: 0},
         {id: 15, nombre: "Arroz amarillo", cant: 0},
     ]);
-
-    //const hambRef = useRef();
-
-    /*useEffect(() => {
-        const storedHambs = JSON.parse(localStorage.getItem(KEY));
-        if(storedHambs){
-            setHambs(storedHambs);
-        }
-    }, [] );*/
 
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(woks))
@@ -63,20 +52,6 @@ export function Woks(props){
 
         return total;
     }
-
-    /*const handleReset = () =>{
-        reset(minutas);
-    }
-
-    const reset = (minutas) =>{
-        let cantidad;
-        
-        for(cantidad in minutas){
-            minutas[cantidad].cant = 0;
-        }
-        setMinutas(minutas);
-        
-    }*/
 
     return (
         <Fragment>

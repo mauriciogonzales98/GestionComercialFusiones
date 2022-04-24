@@ -1,9 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { CarlitosList } from './components/CarlitosList';
-//import {v4 as uuidv4} from 'uuid';
 
 const KEY = "carlitos";
-//const costoFijo = 255;
 
 export function Carlitos(props){
 
@@ -15,15 +13,6 @@ export function Carlitos(props){
         {id: 5, nombre: "Carlitos Pollo", cant: 0},
         {id: 6, nombre: "Carlitos Fusiones", cant: 0},
     ]);
-
-    //const hambRef = useRef();
-
-    /*useEffect(() => {
-        const storedHambs = JSON.parse(localStorage.getItem(KEY));
-        if(storedHambs){
-            setHambs(storedHambs);
-        }
-    }, [] );*/
 
     useEffect(() => {
         localStorage.setItem(KEY, JSON.stringify(carlitos))
@@ -40,7 +29,7 @@ export function Carlitos(props){
     const restar = (id) =>{
         const newCarlitos = [...carlitos];
         const carlito = newCarlitos.find((carlito) =>carlito.id === id);
-        carlito.cant++;
+        carlito.cant--;
         setCarlitos(newCarlitos);
         props.onCarlitosChange(totalViandas(newCarlitos));
     }
@@ -54,20 +43,6 @@ export function Carlitos(props){
 
         return total;
     }
-
-    /*const handleReset = () =>{
-        reset(minutas);
-    }
-
-    const reset = (minutas) =>{
-        let cantidad;
-        
-        for(cantidad in minutas){
-            minutas[cantidad].cant = 0;
-        }
-        setMinutas(minutas);
-        
-    }*/
 
     return (
         <Fragment>
