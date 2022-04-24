@@ -3,6 +3,7 @@ import { Hamburguesas } from './Hamburguesas';
 import { Minutas } from './Minutas';
 import { Woks } from './Woks';
 import { Torpedos } from './Torpedos';
+import { Carlitos } from './Carlitos';
 
 export function App() {
 
@@ -13,6 +14,7 @@ export function App() {
         hamburguesasQty: 0,
         woksQty: 0,
         torpedosQty: 0,
+        carlitosQty: 0,
     });
 
     const minutasChanged = (newQty) => {
@@ -31,7 +33,11 @@ export function App() {
         setState({ ...state, torpedosQty: newQty });
     }
 
-    total = state.hamburguesasQty + state.minutasQty + state.woksQty + state.torpedosQty;
+    const carlitosChanged = (newQty) => {
+        setState({ ...state, carlitosQty: newQty });
+    }
+
+    total = state.hamburguesasQty + state.minutasQty + state.woksQty + state.torpedosQty + state.carlitosQty;
 
     /*const totalViandas = (state) =>{
         let total = 0, cantidad;
@@ -48,7 +54,7 @@ export function App() {
             <Hamburguesas onHamburguesasChange={hamburguesasChanged}/> <br></br>
             <Woks onWoksChange={woksChanged} /> <br></br>
             <Torpedos onTorpedosChange={torpedosChanged} /> <br></br>
-
+            <Carlitos onCarlitosChange={carlitosChanged} /> <br></br>
             <div>
                 El total de viandas es {total}
             </div>
