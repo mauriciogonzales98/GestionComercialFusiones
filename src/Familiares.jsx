@@ -16,6 +16,9 @@ export function Familiares(props){
         {id: 8, nombre: "Familiar Cerdo Comun", cant: 0},
         {id: 9, nombre: "Familiar Cerdo Especial", cant: 0},
         {id: 10, nombre: "Familiar Cerdo Completo", cant: 0},
+        {id: 11, nombre: "Familiar Lomito Comun", cant: 0},
+        {id: 12, nombre: "Familiar Lomito Especial", cant: 0},
+        {id: 13, nombre: "Familiar Lomito Completo", cant: 0},
     ]);
 
     useEffect(() => {
