@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Hamburguesas } from './Hamburguesas';
 import { Minutas } from './Minutas';
@@ -13,13 +13,11 @@ import { Ensaladas } from './Ensaladas';
 import { Pizzas } from './Pizzas';
 
 import { Navbar } from './components/navigations/Navbar';
-import Index from './components/pages/Index';
-import Items from './components/pages/Items';
 import Sections from './components/pages/Sections';
+import Items from './components/pages/Items';
+import Inicio from './components/Inicio';
 
 export function App() {
-
-
 
     let total = 0;
 
@@ -88,11 +86,17 @@ export function App() {
 
     //useEffect(() => console.log(state), [state]);
     return (
-        
+
         <Fragment>
             <div>
                 <Router>
                     <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Inicio />} />
+                        <Route path='/Items' element={<Items />} />
+                        <Route path='/Sections' element={<Sections /> } />
+
+                    </Routes>
                 </Router>
             </div>
             <Minutas onMinutasChange={minutasChanged} /> <br></br>

@@ -2,7 +2,9 @@ import React from 'react'
 
 const Items = () => {
   return (
-    <div>items</div>
+    <div>
+      Esta pagina es de items
+    </div>
   )
 }
 
