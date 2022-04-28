@@ -14,8 +14,8 @@ import { Pizzas } from './Pizzas';
 
 import { Navbar } from './components/navigations/Navbar';
 import Sections from './components/pages/Sections';
-import Items from './components/pages/Items';
-import Inicio from './components/Inicio';
+import Viandas from './components/pages/Viandas';
+import Index from './components/pages/Index';
 
 export function App() {
 
@@ -92,9 +92,10 @@ export function App() {
                 <Router>
                     <Navbar />
                     <Routes>
-                        <Route path="/" element={<Inicio />} />
-                        <Route path='/Items' element={<Items />} />
+                        
+                        <Route path='/Viandas' element={<Viandas />} />
                         <Route path='/Sections' element={<Sections /> } />
+                        <Route path="/Index" element={<Index />} />
 
                     </Routes>
                 </Router>
