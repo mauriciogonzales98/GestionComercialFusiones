@@ -1,4 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Hamburguesas } from './Hamburguesas';
 import { Minutas } from './Minutas';
 import { Woks } from './Woks';
@@ -10,7 +12,14 @@ import { Pastas } from './Pastas';
 import { Ensaladas } from './Ensaladas';
 import { Pizzas } from './Pizzas';
 
+import { Navbar } from './components/navigations/Navbar';
+import Index from './components/pages/Index';
+import Items from './components/pages/Items';
+import Sections from './components/pages/Sections';
+
 export function App() {
+
+
 
     let total = 0;
 
@@ -79,9 +88,15 @@ export function App() {
 
     //useEffect(() => console.log(state), [state]);
     return (
+        
         <Fragment>
+            <div>
+                <Router>
+                    <Navbar />
+                </Router>
+            </div>
             <Minutas onMinutasChange={minutasChanged} /> <br></br>
-            <Hamburguesas onHamburguesasChange={hamburguesasChanged}/> <br></br>
+            <Hamburguesas onHamburguesasChange={hamburguesasChanged} /> <br></br>
             <Woks onWoksChange={woksChanged} /> <br></br>
             <Torpedos onTorpedosChange={torpedosChanged} /> <br></br>
             <Carlitos onCarlitosChange={carlitosChanged} /> <br></br>
