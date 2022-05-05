@@ -20,6 +20,9 @@ export const Navbar = () => {
                                 <Link className="nav-link" to='/Viandas'>Viandas</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link" to='/CostoFijo'>Costo Fijo</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to='/Sections'>Sections</Link>
                             </li>
                         </ul>
